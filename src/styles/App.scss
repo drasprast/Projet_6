@@ -1,0 +1,31 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #FF6060;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.main {
+    margin: 30px 70px 0;
+
+    @media screen and (max-width: 1200px) {
+        margin: 30px 40px 0;
+    }
+
+    @media screen and (max-width: 779px) {
+        margin: 20px;
+    }
+
+    @media screen and (max-width: 550px) {
+        margin: 15px;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+}

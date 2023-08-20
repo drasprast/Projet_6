@@ -1,0 +1,67 @@
+$color_1: white;
+$background-color_1: #FF6060;
+$background-color_2: #F7F7F7;
+$fontsize20: 20px;
+$fontsize18: 18px;
+
+.collapse-button {
+	background-color: $background-color_1;
+	color: $color_1;
+	font-size: $fontsize20;
+	border: none;
+	padding: 15px 20px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+	height: 55px;
+	width: 100%;
+	&:hover {
+		filter: brightness(150%);
+		transition: filter 0.5s ease;
+	}
+}
+.collapse-icon {
+	font-size: $fontsize20;
+	transition: transform 0.5s ease-out;
+	color: $color_1;
+	transform: rotate(0deg);
+	width: 5%;
+	filter: brightness(0) invert(1);
+}
+.collapse-button.open {
+	.collapse-icon {
+		transform: rotate(-90deg);
+	}
+}
+.collapse-content {
+	background-color: $background-color_2;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.5s ease-out;
+	width: 100%;
+	border-radius: 10px;
+	p {
+		padding: 10px;
+	}
+}
+.collapse-content.open {
+	max-height: 500px;
+	width: 100%;
+	transition: max-height 1s ease-in;
+}
+@media screen and (max-width: 779px) {
+	.collapse-button {
+		font-size: $fontsize20;
+		height: 45px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.collapse-button {
+		border-radius: 7px;
+		font-size: $fontsize18;
+		height: 35px;
+	}
+}
