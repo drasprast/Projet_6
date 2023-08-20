@@ -108,7 +108,7 @@ $fontsize18: 18px;
 	display: flex;
 	justify-content: flex-end;
 
-	.etoile-pleine, .etoile-vide {
+	.star-full, .star-empty {
 		width: 25px;
 		height: 25px;
 		padding: 3px;
@@ -119,7 +119,7 @@ $fontsize18: 18px;
 		position: absolute;
 		top: 10px;
 
-		.etoile-pleine, .etoile-vide {
+		.star-full, .star-empty {
 			width: 20px;
 			height: 20px;
 			padding: 2px;
@@ -219,7 +219,7 @@ $fontsize18: 18px;
 		padding: 3px 5px;
 	}
 
-	.etoile-pleine, .etoile-vide {
+	.star-full, .star-empty {
 		width: 16px;
 		height: 16px;
 		padding: 2px;
