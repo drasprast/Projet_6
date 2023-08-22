@@ -52,20 +52,20 @@ const FicheLogement = () => {
     <div>
       <main className="main">
         <Banner />
-        <article className="page-logement">
+        <article className="page_logement">
           {dataLogement.pictures.length > 1 ? (
             <Slideshow pictures={dataLogement.pictures} />
           ) : (
             <img
               src={dataLogement.pictures[0]}
               alt={dataLogement.title}
-              className="image-solo"
+              className="image_solo"
             />
           )}
           <br />
-          <section className="fiche-logement-container">
-            <div className="infos-logement-container">
-              <div className="title-location">
+          <section className="fich_log_contain">
+            <div className="info_log_contain">
+              <div className="title_location">
                 <h1>{dataLogement.title}</h1>
                 <p>{dataLogement.location}</p>
               </div>
@@ -77,13 +77,13 @@ const FicheLogement = () => {
                 </ul>
               </div>
             </div>
-            <div className="host-star-container">
-              <div className="host-picture">
+            <div className="host_star_contain">
+              <div className="host_picture">
                 <p>{dataLogement.host.name}</p>
                 <img
                   src={dataLogement.host.picture}
                   alt={dataLogement.host.name}
-                  className="photo-host"
+                  className="photo_host"
                 />
               </div>
               <div className="stars">
@@ -102,7 +102,7 @@ const FicheLogement = () => {
               </div>
             </div>
           </section>
-          <section className="collapse-fiche-container">
+          <section className="col_fiche_contain">
             <Collapse label="Description">
               <p>{dataLogement.description}</p>
             </Collapse>

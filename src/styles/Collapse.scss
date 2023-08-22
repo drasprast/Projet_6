@@ -16,6 +16,7 @@ $fontsize18: 18px;
 	align-items: center;
 	border-radius: 10px;
 	height: 55px;
+	width: 100%;
 	&:hover {
 		filter: brightness(150%);
 		transition: filter 0.5s ease;
@@ -26,7 +27,7 @@ $fontsize18: 18px;
 	transition: transform 0.5s ease-out;
 	color: $color_1;
 	transform: rotate(0deg);
-	width: 8%;
+	width: 30px;
 	filter: brightness(0) invert(1);
 }
 .col_button.open {
