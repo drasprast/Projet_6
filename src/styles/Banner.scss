@@ -7,42 +7,42 @@ $fontsize14: 14px;
   align-items: center;
 }
 
-.navigation {
+.nav {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
   gap: 50px;
 }
 
-.navigation li {
+.nav li {
   padding: 15px 10px 20px 10px;
 }
 
-.nav-active {
+.nav_active {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 779px) {
-  .navigation {
+  .nav {
     gap: 20px;
     padding-inline-start: 0px;
     margin-top: 20px;
     margin-bottom: 0;
   }
   
-  .navigation li {
+  .nav li {
     font-size: $fontsize16;
     text-transform: uppercase;
   }
 }
 
 @media screen and (max-width: 550px) {
-  .navigation {
+  .nav {
     gap: 10px;
     margin-top: 10px;
   }
 
-  .navigation li {
+  .nav li {
     font-size: $fontsize14;
     padding: 5px 5px 10px 5px;
   }
@@ -53,11 +53,11 @@ $fontsize14: 14px;
 }
 
 @media screen and (max-width: 400px) {
-  .navigation {
+  .nav {
     gap: 5px;
   }
 
-  .navigation li {
+  .nav li {
     font-size: $fontsize14;
     padding: 3px 2px 5px 3px;
   }

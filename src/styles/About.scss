@@ -1,4 +1,4 @@
-.image-about {
+.img_about {
 	margin-top: 50px;
 
 	img {
@@ -10,7 +10,7 @@
 	}
 }
 
-.collapse-about-contain {
+.col_about_contain {
 	display: inline-flex;
 	flex-direction: column;
 	margin-top: 38px;
@@ -21,26 +21,26 @@
 	}
 
 	@media screen and (max-width: 779px) {
-		.collapse-icon {
+		.col_icon {
 			width: 6%;
 		}
 	}
 
 	@media screen and (max-width: 550px) {
-		.collapse-icon {
+		.col_icon {
 			width: 9%;
 		}
 	}
 
 	@media screen and (max-width: 400px) {
-		.collapse-icon {
+		.col_icon {
 			width: 12%;
 		}
 	}
 }
 
 @media screen and (max-width: 779px) {
-	.image-about {
+	.img_about {
 		img {
 			height: 250px;
 			border-radius: 10px;
@@ -49,7 +49,7 @@
 }
 
 @media screen and (max-width: 550px) {
-	.image-about {
+	.img_about {
 		img {
 			height: 300px;
 		}
@@ -57,7 +57,7 @@
 }
 
 @media screen and (max-width: 400px) {
-	.image-about {
+	.img_about {
 		img {
 			height: 250px;
 		}

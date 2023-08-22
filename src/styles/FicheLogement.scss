@@ -128,7 +128,8 @@ $fontsize18: 18px;
 }
 
 .collapse-fiche-container {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	gap: 50px;
 
 	ul {

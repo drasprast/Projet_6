@@ -1,4 +1,4 @@
-.logo-container {
+.logo_contain {
     width: 180px;
   }
   
@@ -8,19 +8,19 @@
   }
   
   @media screen and (max-width: 779px) {
-    .logo-container {
+    .logo_contain {
       max-width: 160px;
     }
   }
   
   @media screen and (max-width: 550px) {
-    .logo-container {
+    .logo_contain {
       max-width: 140px;
     }
   }
   
   @media screen and (max-width: 400px) {
-    .logo-container {
+    .logo_contain {
       max-width: 120px;
     }
   }

@@ -14,7 +14,7 @@ const CardsLogements = () => {
     return data.map((logement) => <Card key={logement.id} card={logement} />);
   };
 
-  return <div className="card-container">{renderLogementCards()}</div>;
+  return <div className="card_contain">{renderLogementCards()}</div>;
 };
 
 export default CardsLogements;

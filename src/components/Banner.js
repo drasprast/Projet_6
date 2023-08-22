@@ -13,12 +13,12 @@ const Banner = () => {
     <div className="banner">
       <Logo />
       <nav>
-        <ul className="navigation">
+        <ul className="nav">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}
               to={link.path}
-              className={location.pathname === link.path ? "nav-active" : ""}
+              className={location.pathname === link.path ? "nav_active" : ""}
             >
               <li>{link.text}</li>
             </NavLink>

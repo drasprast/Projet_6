@@ -1,17 +1,17 @@
 import React from "react";
-import Banner from "../components/Banner";
 import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
+import Banner from "../components/Banner";
 
 const Erreur404 = () => {
   return (
     <div>
       <main className="main">
         <Banner />
-        <section className="msg-erreur">
+        <section className="msg_error">
           <h1>404</h1>
           <p>Oups! La page que vous demandez n'existe pas.</p>
-          <NavLink className="lien-page-erreur" to="/">
+          <NavLink className="link_error" to="/">
             Retourner sur la page d'accueil
           </NavLink>
         </section>

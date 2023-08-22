@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import chevron from "../assets/img/chevron.png";
+import fleche from "../assets/img/fleche.png";
 
 const Collapse = (props) => {
   const [open, setOpen] = useState(false);
@@ -12,21 +12,18 @@ const Collapse = (props) => {
   return (
     <div>
       <button
-        className={`collapse-button ${open ? "open" : ""}`}
+        className={`col_button ${open ? "open" : ""}`}
         onClick={toggleCollapse}
       >
         {props.label}
         <img
-          className="collapse-icon"
-          src={chevron}
-          alt="chevron icon"
+          className="col_icon"
+          src={fleche}
+          alt="fleche icon"
           style={{ transform: open ? "rotate(-180deg)" : "" }}
         />
       </button>
-      <div
-        ref={contentRef}
-        className={`collapse-content ${open ? "open" : ""}`}
-      >
+      <div ref={contentRef} className={`col_content ${open ? "open" : ""}`}>
         {props.children}
       </div>
     </div>

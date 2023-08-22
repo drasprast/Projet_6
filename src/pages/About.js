@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
-import imageAbout from "../assets/img/image-page-about.png";
+import imageAbout from "../assets/img/img_about.png";
 
 const collapsibleSections = [
   {
@@ -32,10 +32,10 @@ const About = () => {
     <div>
       <main className="main">
         <Banner />
-        <div className="image-about">
+        <div className="img_about">
           <img src={imageAbout} alt="montagne" />
         </div>
-        <section className="collapse-about-contain">
+        <section className="col_about_contain">
           {collapsibleSections.map((section, index) => (
             <div key={index}>
               <Collapse label={section.label}>

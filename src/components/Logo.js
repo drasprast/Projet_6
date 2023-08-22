@@ -4,7 +4,7 @@ import kasaLogo from "../assets/img/logo_salmon.png";
 
 const Logo = () => {
   return (
-    <div className="logo-container">
+    <div className="logo_contain">
       <NavLink to="/">
         <img src={kasaLogo} alt="Kasa Logo" className="logo" />
       </NavLink>

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import Banner from "../components/Banner";
-import Erreur404 from "./Erreur404";
+import Error404 from "./Error404";
+import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
 import Slideshow from "../components/Slideshow";
-import Footer from "../components/Footer";
-import starFull from "../assets/img/etoile-pleine.png";
-import starEmpty from "../assets/img/etoile-vide.png";
+import Banner from "../components/Banner";
+import starFull from "../assets/img/star_full.png";
+import starEmpty from "../assets/img/star_empty.png";
 
 const FicheLogement = () => {
   const [data, setData] = useState([]);
@@ -43,7 +43,7 @@ const FicheLogement = () => {
   }
 
   if (!dataLogement) {
-    return <Erreur404 />;
+    return <Error404 />;
   }
 
   const tableauStars = [1, 2, 3, 4, 5];

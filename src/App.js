@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
-import Erreur404 from "./pages/Erreur404";
+import Error404 from "./pages/Error404";
 import FicheLogement from "./pages/FicheLogement";
 import Home from "./pages/Home";
 import "./styles/App.scss";
@@ -11,7 +11,7 @@ import "./styles/Card.scss";
 import "./styles/CardsLogements.scss";
 import "./styles/Collapse.scss";
 import "./styles/FicheLogement.scss";
-import "./styles/Erreur404.scss";
+import "./styles/Error404.scss";
 import "./styles/Logo.scss";
 import "./styles/Footer.scss";
 import "./styles/Home.scss";
@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/fichelogement" element={<FicheLogement />} />
-        <Route path="*" element={<Erreur404 />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   );
