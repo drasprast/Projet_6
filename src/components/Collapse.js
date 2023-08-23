@@ -14,7 +14,6 @@ const Collapse = (props) => {
   // Référence à l'élément de contenu pliable
   const contentRef = useRef();
 
-  // Rendu du composant Collapse
   return (
     <div>
       {/* Bouton pour basculer le contenu pliable */}

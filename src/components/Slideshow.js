@@ -15,15 +15,18 @@ const Slide = React.memo(({ isActive, image }) => (
 const Slideshow = ({ pictures }) => {
   // État local pour suivre l'index de la diapositive actuelle
   const [currentSlide, setCurrentSlide] = useState(0);
+  // Nombre total de diapositives dans le diaporama
   const totalSlides = pictures.length;
 
   // Fonction pour passer à la diapositive suivante
   const nextSlide = () => {
+    // L'opération modulo garantit que l'index reste dans la plage valide
     setCurrentSlide((currentSlide + 1) % totalSlides);
   };
 
   // Fonction pour passer à la diapositive précédente
   const prevSlide = () => {
+    // L'opération modulo avec totalSlides garantit le défilement circulaire
     setCurrentSlide((currentSlide - 1 + totalSlides) % totalSlides);
   };
 
