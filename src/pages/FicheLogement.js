@@ -11,23 +11,25 @@ import starEmpty from "../assets/img/star_empty.png";
 // Composant FicheLogement pour afficher les détails d'un logement
 const FicheLogement = () => {
   // États locaux pour stocker les données des logements et du logement sélectionné
-  const [data, setData] = useState([]);
-  const [dataLogement, setDataLogement] = useState(null);
+  const [data, setData] = useState([]); // État pour stocker toutes les données de logements
+  const [dataLogement, setDataLogement] = useState(null); // État pour stocker les données du logement sélectionné
 
   // Effet secondaire pour charger les données des logements au montage
   useEffect(() => {
-    let isMounted = true;
+    let isMounted = true; // Variable pour suivre si le composant est monté
 
+    // Récupération des données depuis "logements.json" en utilisant une requête fetch
     fetch("logements.json")
       .then((response) => response.json())
       .then((data) => {
         if (isMounted) {
-          setData(data);
+          setData(data); // Mise à jour de l'état "data" seulement si le composant est toujours monté
         }
       });
 
+    // Fonction de nettoyage qui sera exécutée lorsque le composant est démonté
     return () => {
-      isMounted = false;
+      isMounted = false; // Définir "isMounted" à false pour indiquer que le composant est démonté
     };
   }, []);
 
@@ -37,8 +39,9 @@ const FicheLogement = () => {
 
   // Effet secondaire pour mettre à jour le logement sélectionné en fonction de l'ID
   useEffect(() => {
+    // Recherche du logement correspondant à l'ID dans les données
     const foundLogement = data.find((logement) => logement.id === idLogement);
-    setDataLogement(foundLogement);
+    setDataLogement(foundLogement); // Mise à jour de l'état "dataLogement" avec le logement trouvé
   }, [data, idLogement]);
 
   // Si aucun logement n'est trouvé, affiche une page d'erreur
