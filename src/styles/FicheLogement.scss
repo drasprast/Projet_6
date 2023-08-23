@@ -79,6 +79,7 @@ $fontsize18: 18px;
 	flex-direction: row;
 	justify-content: flex-end;
 	gap: 10px;
+	padding-top: 30px;
 
 	p {
 		font-size: $fontsize18;
@@ -208,8 +209,13 @@ $fontsize18: 18px;
 		margin-top: 20px;
 	}
 
-	.col_fiche_contain .col_icon {
+	.col_icon {
 		width: 9%;
+	}
+	.col_fiche_contain{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 	}
 }
 
@@ -230,7 +236,13 @@ $fontsize18: 18px;
 		font-size: 22px;
 	}
 
-	.col_fiche_contain .col_icon {
+	.col_icon {
 		width: 10%;
+		
+	}
+	.col_fiche_contain{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 	}
 }
