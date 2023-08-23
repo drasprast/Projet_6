@@ -8,11 +8,13 @@ import Banner from "../components/Banner";
 import starFull from "../assets/img/star_full.png";
 import starEmpty from "../assets/img/star_empty.png";
 
+// Composant FicheLogement pour afficher les détails d'un logement
 const FicheLogement = () => {
+  // États locaux pour stocker les données des logements et du logement sélectionné
   const [data, setData] = useState([]);
-  // const [loading, setLoading] = useState(true);
   const [dataLogement, setDataLogement] = useState(null);
 
+  // Effet secondaire pour charger les données des logements au montage
   useEffect(() => {
     let isMounted = true;
 
@@ -21,7 +23,6 @@ const FicheLogement = () => {
       .then((data) => {
         if (isMounted) {
           setData(data);
-          // setLoading(false);
         }
       });
 
@@ -30,32 +31,36 @@ const FicheLogement = () => {
     };
   }, []);
 
+  // Récupère les paramètres de recherche de l'URL
   const [searchParams] = useSearchParams();
   const [idLogement] = useState(searchParams.get("_id"));
 
+  // Effet secondaire pour mettre à jour le logement sélectionné en fonction de l'ID
   useEffect(() => {
     const foundLogement = data.find((logement) => logement.id === idLogement);
     setDataLogement(foundLogement);
   }, [data, idLogement]);
 
-  // if (loading) {
-  //   return <div>Chargement en cours...</div>;
-  // }
-
+  // Si aucun logement n'est trouvé, affiche une page d'erreur
   if (!dataLogement) {
     return <Error404 />;
   }
 
+  // Tableau pour gérer les étoiles de notation
   const tableauStars = [1, 2, 3, 4, 5];
 
+  // Rendu du composant FicheLogement
   return (
     <div>
       <main className="main">
+        {/* Affiche la bannière */}
         <Banner />
         <article className="page_logement">
+          {/* Affiche le diaporama si plusieurs images sont présentes */}
           {dataLogement.pictures.length > 1 ? (
             <Slideshow pictures={dataLogement.pictures} />
           ) : (
+            /* Sinon, affiche une image unique */
             <img
               src={dataLogement.pictures[0]}
               alt={dataLogement.title}
@@ -70,6 +75,7 @@ const FicheLogement = () => {
                 <p>{dataLogement.location}</p>
               </div>
               <div>
+                {/* Affiche les tags associés au logement */}
                 <ul className="tags">
                   {dataLogement.tags.map((tag, index) => (
                     <li key={index}>{tag}</li>
@@ -80,6 +86,7 @@ const FicheLogement = () => {
             <div className="host_star_contain">
               <div className="host_picture">
                 <p>{dataLogement.host.name}</p>
+                {/* Affiche la photo de l'hôte */}
                 <img
                   src={dataLogement.host.picture}
                   alt={dataLogement.host.name}
@@ -87,6 +94,7 @@ const FicheLogement = () => {
                 />
               </div>
               <div className="stars">
+                {/* Affiche les étoiles de notation en fonction de la note */}
                 {tableauStars.map((star, index) => (
                   <img
                     key={index}
@@ -103,9 +111,11 @@ const FicheLogement = () => {
             </div>
           </section>
           <section className="col_fiche_contain">
+            {/* Section pliable pour afficher la description */}
             <Collapse label="Description">
               <p>{dataLogement.description}</p>
             </Collapse>
+            {/* Section pliable pour afficher les équipements */}
             <Collapse label="Equipements">
               <ul>
                 {dataLogement.equipments.map((equipement, index) => (
