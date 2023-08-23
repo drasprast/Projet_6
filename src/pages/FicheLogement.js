@@ -10,7 +10,7 @@ import starEmpty from "../assets/img/star_empty.png";
 
 const FicheLogement = () => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [dataLogement, setDataLogement] = useState(null);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const FicheLogement = () => {
       .then((data) => {
         if (isMounted) {
           setData(data);
-          setLoading(false);
+          // setLoading(false);
         }
       });
 
@@ -38,9 +38,9 @@ const FicheLogement = () => {
     setDataLogement(foundLogement);
   }, [data, idLogement]);
 
-  if (loading) {
-    return <div>Chargement en cours...</div>;
-  }
+  // if (loading) {
+  //   return <div>Chargement en cours...</div>;
+  // }
 
   if (!dataLogement) {
     return <Error404 />;

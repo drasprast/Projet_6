@@ -1,17 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+// Composant fonctionnel pour afficher une carte (card) de logement
 const Card = (props) => {
-  /* Accepts the parameter (props) (provided in CardsLogements) to retrieve each property of a logement */
+  // Extraire les propriétés de la carte passées en tant que 'props'
   const { id, cover, title } = props.card;
 
+  // Rendu de la carte
   return (
     <article>
+      {/* Utilisation de NavLink pour créer un lien vers la fiche de logement */}
       <NavLink
         to={{
-          /* Navigation link to the FicheLogement page */
           pathname: "../fichelogement",
-          /* Appending the clicked logement's ID to the URL */
           search: `?_id=${id}`,
         }}
       >

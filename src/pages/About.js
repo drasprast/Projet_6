@@ -4,7 +4,7 @@ import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 import imageAbout from "../assets/img/img_about.png";
 
-const collapsibleSections = [
+const collapseLabel = [
   {
     label: "Fiabilité",
     content:
@@ -36,7 +36,7 @@ const About = () => {
           <img src={imageAbout} alt="montagne" />
         </div>
         <section className="col_about_contain">
-          {collapsibleSections.map((section, index) => (
+          {collapseLabel.map((section, index) => (
             <div key={index}>
               <Collapse label={section.label}>
                 <p>{section.content}</p>
